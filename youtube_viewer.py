@@ -188,7 +188,7 @@ def viewVideo(position):
         }
 
         response = requests.get(
-            'https://www.youtube.com/', headers=headers, proxies=proxyDict, timeout=30)
+            'https://www.twitter.com/', headers=headers, proxies=proxyDict, timeout=30)
         status = response.status_code
 
         if status == 200:
@@ -202,7 +202,7 @@ def viewVideo(position):
                 else:
                     method = 2
                     query = random.choice(queries)
-                    url = f"https://www.youtube.com/results?search_query={query[0].replace(' ', '%20')}"
+                    url = f"https://twitter.com/search?q={query[0].replace(' ', '%20')}"
 
                 options = webdriver.ChromeOptions()
                 options.add_experimental_option(
